@@ -1,0 +1,8 @@
+.mapChart {
+  height: 457px;
+  padding-top: 24px;
+  text-align: center; }
+  .mapChart img {
+    max-height: 437px;
+    max-width: 100%;
+    display: inline-block; }
