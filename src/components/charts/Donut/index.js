@@ -13,9 +13,6 @@ import DataSet from "@antv/data-set";
 
 class Donut extends React.Component {
   render () {
-    if (this.chart) {
-      this.chart.forceFit()
-    }
     const {DataView} = DataSet;
     const {Html} = Guide;
     const data = [
@@ -59,9 +56,6 @@ class Donut extends React.Component {
       <div>
         <Chart
           height={230}
-          onGetG2Instance={(chart) => {
-            this.chart = chart;
-          }}
           data={dv}
           scale={cols}
           padding={'auto'}

@@ -4,11 +4,6 @@ import {Layout} from "antd";
 const {Footer} = Layout;
 
 export default class FooterView extends Component {
-
-  constructor (props) {
-    super(props);
-  }
-
   render () {
     return (
       <Footer style={{textAlign: 'center'}}>

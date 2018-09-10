@@ -10,9 +10,6 @@ import DataSet from "@antv/data-set";
 
 class BarChart extends React.Component {
   render() {
-    if (this.chart) {
-      this.chart.forceFit()
-    }
     const data = [
       {
         name: "London",
@@ -52,9 +49,7 @@ class BarChart extends React.Component {
         <Chart
           padding={'auto'}
           data={dv}
-          onGetG2Instance={(chart) => {
-            this.chart = chart;
-          }} forceFit>
+          forceFit>
           <Axis name="月份" />
           <Axis name="月均降雨量" />
           <Legend />

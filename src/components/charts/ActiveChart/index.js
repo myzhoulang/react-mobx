@@ -1,2 +1,2 @@
 import React, {Component} from "react";
-import {MinArea} from '../'
+import {MinArea} from '../.'

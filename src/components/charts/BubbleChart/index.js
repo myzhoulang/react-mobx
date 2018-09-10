@@ -13,9 +13,6 @@ class BubbleChart extends React.Component {
 
   }
   render() {
-    if (this.chart) {
-      this.chart.forceFit(true)
-    }
     const colorMap = {
       Asia: G2.Global.colors[0],
       Americas: G2.Global.colors[1],
@@ -43,9 +40,7 @@ class BubbleChart extends React.Component {
         height={475}
         data={this.props.data}
         scale={cols}
-        onGetG2Instance={(chart) => {
-          this.chart = chart;
-        }}  forceFit>
+        forceFit>
         <Tooltip showTitle={false} />
         <Axis
           name="GDP"

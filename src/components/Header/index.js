@@ -5,10 +5,6 @@ import userAvatar from "../../assets/images/user.png";
 const {Header} = Layout;
 
 export default class HeaderView extends Component{
-  constructor (props) {
-    super(props);
-  }
-
   render () {
     return (
       <Header id="header">
@@ -20,11 +16,11 @@ export default class HeaderView extends Component{
           />
 
           <div className="global-header-index-right">
-            <a href="#" className="global-header-index-action">
+            <a href="/" className="global-header-index-action">
               <Icon type="question-circle"></Icon>
             </a>
 
-            <a href="#" className="global-header-index-action">
+            <a href="/" className="global-header-index-action">
               <Icon type="bell"></Icon>
             </a>
 

@@ -12,9 +12,6 @@ const {Sider} = Layout
 
 @observer
 class SliderBar extends Component{
-  constructor (arg) {
-    super(...arg)
-  }
 
   @computed get collapsed () {
     return this.props.collapsed

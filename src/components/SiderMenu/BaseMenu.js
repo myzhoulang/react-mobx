@@ -5,10 +5,6 @@ import {Link} from "react-router-dom";
 const SubMenu = Menu.SubMenu;
 
 class BaseMenu extends Component{
-  constructor (arg) {
-    super(arg);
-  }
-
   render(){
     return (
       <Menu
