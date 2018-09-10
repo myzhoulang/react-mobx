@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Layout} from "antd";
-import {Switch, Route} from "react-router-dom";
+import {Route} from "react-router-dom";
 
 
 import SiderMenu from "../components/SiderMenu";
@@ -10,12 +10,7 @@ import DashBoard from "../pages/DashBoard/DashBoard"
 const {Content} = Layout;
 
 export default class BasicLayout extends Component{
-  constructor (props) {
-    super(props);
-  }
-
   render () {
-
     return (
       <Layout>
         <SiderMenu collapsed={this.collapsed}/>
