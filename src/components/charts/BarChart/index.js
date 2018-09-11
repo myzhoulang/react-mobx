@@ -47,6 +47,7 @@ class BarChart extends React.Component {
     return (
       <div>
         <Chart
+          height={this.props.height}
           padding={'auto'}
           data={dv}
           forceFit>
