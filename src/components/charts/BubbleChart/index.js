@@ -1,4 +1,7 @@
 import React from "react";
+import {observable} from 'mobx';
+import {observer} from "mobx-react";
+
 import {
   G2,
   Chart,
@@ -8,11 +11,13 @@ import {
   Tooltip,
 } from "bizcharts";
 
+@observer
 class BubbleChart extends React.Component {
-  componentDidUpdate () {
-
+  componentDidMount () {
+    console.log(this.props)
   }
-  render() {
+
+  render () {
     const colorMap = {
       Asia: G2.Global.colors[0],
       Americas: G2.Global.colors[1],
@@ -37,11 +42,11 @@ class BubbleChart extends React.Component {
     return (
       <Chart
         padding={'auto'}
-        height={475}
+        height={this.props.height}
         data={this.props.data}
         scale={cols}
         forceFit>
-        <Tooltip showTitle={false} />
+        <Tooltip showTitle={false}/>
         <Axis
           name="GDP"
           label={{
@@ -50,8 +55,8 @@ class BubbleChart extends React.Component {
             } // 格式化坐标轴的显示
           }}
         />
-        <Axis name="LifeExpectancy" />
-        <Legend reversed offsetY={-10} />
+        <Axis name="LifeExpectancy"/>
+        <Legend reversed offsetY={-10}/>
         <Geom
           type="point"
           position="GDP*LifeExpectancy"

@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {Icon, Menu} from "antd";
 import {Link} from "react-router-dom";
+import {ControllerIcon} from "../Icons";
+
 
 const SubMenu = Menu.SubMenu;
 
@@ -57,7 +59,7 @@ class BaseMenu extends Component{
           </Menu.Item>
         </SubMenu>
 
-        <SubMenu key="sub6" title={<span><Icon type="setting" /><span> 控制中心</span></span>}>
+        <SubMenu key="sub6" title={<span><ControllerIcon style={{ color: 'hotpink' }} /><span> 控制中心</span></span>}>
           <Menu.Item key="6">
             <span className="nav-text">进件管理</span>
           </Menu.Item>

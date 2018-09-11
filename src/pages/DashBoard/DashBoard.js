@@ -7,10 +7,10 @@ import {observer} from "mobx-react";
 import mocks from "../../mocks/point-bubble-mock.json";
 
 import NumberInfo from '../../components/NumberInfo';
-import BarChart from "../../components/charts/BarChart";
-import BubbleChart from "../../components/charts/BubbleChart";
-import Donut from "../../components/charts/Donut";
-import Line from "../../components/charts/Line"
+import BarChart from "../../components/Charts/BarChart";
+import BubbleChart from "../../components/Charts/BubbleChart";
+import Donut from "../../components/Charts/Donut";
+import Line from "../../components/Charts/Line"
 
 import './DashBoard.css';
 
@@ -26,7 +26,6 @@ export default class DashBoard extends Component {
     setTimeout(() => {
       this.setStatus()
     }, 1000)
-
   }
 
   render () {
@@ -52,7 +51,7 @@ export default class DashBoard extends Component {
 
               <div className='mapChart'>
                 <Tooltip title="等待后期实现">
-                  {this.status === 'success' && <BubbleChart data={this.data}/>}
+                  {this.status === 'success' && <BubbleChart height={480} data={this.data}/>}
                 </Tooltip>
               </div>
             </Card>
@@ -71,7 +70,7 @@ export default class DashBoard extends Component {
         <Row>
           <Col>
             <Card title="活动实时交易情况" bordered={false}>
-              {this.status === 'success' && <BarChart/>}
+              {this.status === 'success' && <BarChart height={400}/>}
             </Card>
           </Col>
         </Row>
